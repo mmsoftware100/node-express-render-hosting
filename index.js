@@ -58,7 +58,10 @@ app.get('/scrap', async (req, res) => {
       console.log("waiting for selector");
       // const mainValue = await page.evaluate('$("#iChart-bodyLabels-cnt > div.iChart-bodylabels-ohlc > span:nth-child(2) > span.closeLabel").text()');
       const rateValue = await page.evaluate('$("#iChart-bodyLabels-cnt > div.iChart-bodylabels-ohlc > span:nth-child(2)").text();');
-      let mainData = rateValue.trim().split(" ").map((num) => num.trim());
+      let mainData = rateValue.trim().split(" "); // .map((num) => num.trim());
+      for(let i=0; i < mainData.length; i++){
+        mainData[i] = mainData[i].trim();
+      }
       let firstDigit = mainData[0][mainData[0].length - 1];
       let secondDigit = mainData[1][mainData[1].length - 1];
       let digit = firstDigit+""+secondDigit; // mainData[0].at(-1)+""+mainData[1].at(-1);
