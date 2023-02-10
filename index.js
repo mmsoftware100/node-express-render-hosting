@@ -94,6 +94,7 @@ app.get('/scrap', async (req, res) => {
       */
      console.log("res.send ");
      console.log(data);
+     browser.close();
      res.send(data);
 	} catch (err) {
 	    console.log("Could not create a browser instance => : ", err);
