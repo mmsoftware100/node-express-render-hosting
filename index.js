@@ -51,7 +51,7 @@ app.get('/scrap', async (req, res) => {
       console.log(`Navigating to ${url}`);
       await page.goto(url);
       console.log('before waiting');
-      //await delay(4000);
+      await delay(4000);
       console.log('after waiting');
       // $("#iChart-bodyLabels-cnt > div.iChart-bodylabels-ohlc > span:nth-child(2) > span.closeLabel").text();
 
