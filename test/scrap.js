@@ -1,13 +1,4 @@
-## To run the application, execute the following commands in sequence
 
-```Javascript
-1. yarn install
-2. yarn start
-```
-
-## Socket Integration
-
-$("#iChart-bodyLabels-cnt").text();
 var previousText = "";
 function myFunction() {
     console.log("myFunction");
@@ -22,6 +13,4 @@ function myFunction() {
     }
 }
 
-setTimeout(myFunction, 1000)
-
-
+setTimeout(myFunction, 1000);
